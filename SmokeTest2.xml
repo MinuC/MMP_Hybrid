@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PatientModule">
+  <test name="PatientTest">
+    <classes>
+      <class name="testCases.VerifyMMPHomePage_SuiteLevel"/>
+      <class name="testCases.VerifyPatientLoginPage_ExtentReports_Logs_SuiteLevel"/>
+      <class name="testCases.VerifyPatientHomePage_ExtentReports_Logs_SuiteLevel"/>
+    </classes>
+  </test> <!-- PatientTest -->
+</suite> <!-- PatientModule -->

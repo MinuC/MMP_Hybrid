@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E2ESuite">
+  <test name="E2EVer1">
+    <classes>     
+      <class name="testCases.VerifyProfilePage"/>
+      <class name="testCases.VerifyPatientHomePage"/> 
+      <class name="testCases.VerifyMMPHomePage"/> 
+      <class name="testCases.VerifyPatientLoginPage"/>   
+    </classes>
+  </test> <!-- E2EVer1 -->
+</suite> <!-- E2ESuite -->

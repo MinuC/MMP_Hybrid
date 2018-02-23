@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="MMPValidation" duration-ms="67098" started-at="2017-11-15T22:27:10Z" finished-at="2017-11-15T22:28:17Z">
+    <groups>
+    </groups>
+    <test name="MMPSmokeTest" duration-ms="67098" started-at="2017-11-15T22:27:10Z" finished-at="2017-11-15T22:28:17Z">
+      <class name="testCases.VerifyMMPHomePage">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.VerifyMMPHomePage@13deb50e]" name="setUp" is-config="true" duration-ms="28242" started-at="2017-11-15T17:27:10Z" finished-at="2017-11-15T17:27:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:testCases.VerifyMMPHomePage@13deb50e]" name="verifyTitle" duration-ms="153" started-at="2017-11-15T17:27:38Z" finished-at="2017-11-15T17:27:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.VerifyMMPHomePage@13deb50e]" name="tearDown" is-config="true" duration-ms="0" started-at="2017-11-15T17:28:17Z" finished-at="2017-11-15T17:28:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.VerifyMMPHomePage -->
+      <class name="testCases.VerifyPatientLoginPage">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.VerifyPatientLoginPage@239963d8]" name="setUp" is-config="true" duration-ms="14870" started-at="2017-11-15T17:27:38Z" finished-at="2017-11-15T17:27:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:testCases.VerifyPatientLoginPage@239963d8]" name="verifyTitle" duration-ms="13" started-at="2017-11-15T17:27:53Z" finished-at="2017-11-15T17:27:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.VerifyPatientLoginPage@239963d8]" name="tearDown" is-config="true" duration-ms="1602" started-at="2017-11-15T17:27:53Z" finished-at="2017-11-15T17:27:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.VerifyPatientLoginPage@239963d8]" name="setUp" is-config="true" duration-ms="14606" started-at="2017-11-15T17:27:55Z" finished-at="2017-11-15T17:28:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="appLogin()[pri:1, instance:testCases.VerifyPatientLoginPage@239963d8]" name="appLogin" duration-ms="7186" started-at="2017-11-15T17:28:09Z" finished-at="2017-11-15T17:28:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.VerifyPatientLoginPage@239963d8]" name="tearDown" is-config="true" duration-ms="402" started-at="2017-11-15T17:28:17Z" finished-at="2017-11-15T17:28:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.VerifyPatientLoginPage -->
+    </test> <!-- MMPSmokeTest -->
+  </suite> <!-- MMPValidation -->
+</testng-results>
