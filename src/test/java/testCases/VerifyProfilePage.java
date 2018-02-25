@@ -59,7 +59,7 @@ public class VerifyProfilePage {
 		pLogin.loginToAppln(DataProviderFactory.getExcel().getCellData(0, 0, 0), DataProviderFactory.getExcel().getCellData(0, 0, 1));	
 	}	
 
-	@Test(description="Verify Title & Username - PatientHomePage", dependsOnMethods = {"appLogin"})
+	@Test(priority=2, description="Verify Title & Username - PatientHomePage", dependsOnMethods = {"appLogin"})
 	public void validateTitleAndUsername(){
 		
 		pHome = PageFactory.initElements(driver, PatientHomePage.class);
