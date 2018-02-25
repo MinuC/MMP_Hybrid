@@ -22,12 +22,22 @@ public class MMPHomePage {		// MAIN HOME PAGE
 	@FindBy(xpath="//a[text()='Contact Us']") WebElement contactUsLink;
 	
 	@FindBy(xpath="//a[text()='Login'][1]") WebElement loginLink;
+	@FindBy(xpath="//a[text()='Register']") WebElement registerLink;
 	
 	public void navigateToPatientLoginPage()
 	{
 		//driver.findElement(By.linkText("Patient Login")).click();
 		patientLoginLink.click(); // Click on <Patient Login> tab
 		loginLink.click();
+		//driver.findElement(By.linkText("Login")).click(); // Click on <Login> button
+		//driver.findElement(By.cssSelector(".button.button-alt")).click();
+	}
+	
+	public void navigateToPatientRegisterPage()
+	{
+		//driver.findElement(By.linkText("Patient Login")).click();
+		patientLoginLink.click(); // Click on <Patient Login> tab
+		registerLink.click();
 		//driver.findElement(By.linkText("Login")).click(); // Click on <Login> button
 		//driver.findElement(By.cssSelector(".button.button-alt")).click();
 	}

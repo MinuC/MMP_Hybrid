@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.VerifyProfilePage">
+      <class name="testCases.VerifyPatientHomePage_ExtentReports_Logs_Sshot">
         <methods>
-          <include name="validateTitleAndUsername"/>
-          <include name="closeReport"/>
-          <include name="setUp"/>
           <include name="appLogin"/>
-          <include name="navigateToProfilePage"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- testCases.VerifyProfilePage -->
+      </class> <!-- testCases.VerifyPatientHomePage_ExtentReports_Logs_Sshot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

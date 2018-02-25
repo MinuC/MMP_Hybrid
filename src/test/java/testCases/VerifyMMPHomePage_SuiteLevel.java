@@ -28,8 +28,9 @@ public class VerifyMMPHomePage_SuiteLevel {
 
 	@BeforeMethod
 	public void setUp(){
+		
 		driver = BrowserFactory.getBrowser("Firefox");
-		report = new ExtentReports(".\\Reports\\Suite_MMPHomePage.html",true);
+		report = new ExtentReports(".\\Reports\\Suite_MMPHomePage_0224.html",true);
 		logger = report.startTest("Verify MMPHome Page - Logs and reports added");
 		driver.get(DataProviderFactory.getConfig().getApplicationUrl());	
 		logger.log(LogStatus.INFO, "Application up and running");	
@@ -37,6 +38,7 @@ public class VerifyMMPHomePage_SuiteLevel {
 	
 	@Test(priority=0)
 	public void verifyTitle() throws InterruptedException{
+		
 		mmpHome = PageFactory.initElements(driver, MMPHomePage.class);
 
 		String mmpTitle = mmpHome.getTitle();
@@ -47,6 +49,8 @@ public class VerifyMMPHomePage_SuiteLevel {
 	
 	@AfterMethod
 	public void reportCapture(){
+		
+		logger.log(LogStatus.INFO, "About to close browser");
 		BrowserFactory.closeBrowser();
 		report.endTest(logger);
 		report.flush();

@@ -18,9 +18,11 @@ public class Helper {
 		TakesScreenshot tsh = (TakesScreenshot)driver;
 		
 		File src = tsh.getScreenshotAs(OutputType.FILE);
+		
 		//String destination = "./Screenshots/"+ssName+System.currentTimeMillis()+".png";
-		String destination = "C:\\Minu\\Training\\H2k\\Sudheer\\Assignments\\Java\\MMP_Hybrid\\Screenshots\\"+
-																		ssName+System.currentTimeMillis()+".png";
+		/*String destination = "C:\\Minu\\Training\\H2k\\Sudheer\\Assignments\\Java\\MMP_Hybrid\\Screenshots\\"+
+																		ssName+System.currentTimeMillis()+".png";*/
+		String destination = System.getProperty("user.dir")+ "\\Screenshots\\"+ ssName+".png";
 		try {
 			FileUtils.copyFile(src, new File(destination));
 		} catch (IOException e) {

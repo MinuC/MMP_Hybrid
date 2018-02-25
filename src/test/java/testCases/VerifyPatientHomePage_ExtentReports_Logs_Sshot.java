@@ -42,6 +42,7 @@ ExtentTest logger;
 
 	@BeforeMethod
 	public void setUp(){
+		
 		driver = BrowserFactory.getBrowser("Firefox");
 		
 		report = new ExtentReports(".\\Reports\\Suite_PatientHomePage.html", true);
@@ -79,6 +80,8 @@ ExtentTest logger;
 		
 		/*loginToApp method in PatientLoginPage is returning the username. Assigning that value to string user.
 		Reading login credentials from Excel sheet*/
+		
+		logger.log(LogStatus.INFO, logger.addScreenCapture(Helper.captureScreenshot(driver, "PatientLoginPage")));
 		pLogin.loginToAppln(DataProviderFactory.getExcel().getCellData(0, 0, 0), DataProviderFactory.getExcel().getCellData(0, 0, 1));
 		
 		logger.log(LogStatus.PASS, "Logged in to PatientHomePage");
@@ -97,7 +100,7 @@ ExtentTest logger;
 		String user = pHome.verifyUser();
 		//System.out.println("Valid user: "+ user);
 		//Assert.assertTrue(user.contains("TomBrady"));
-		Assert.assertEquals(user, "TomBrady_123");
+		Assert.assertEquals(user, "spade");
 		//Assert.assertEquals(user, "Brian","User names not matching");
 		
 		logger.log(LogStatus.PASS, "In PatientHomePage - Validated user");

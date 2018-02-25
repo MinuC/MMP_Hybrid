@@ -2,17 +2,45 @@ package testCases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import factory.BrowserFactory;
 import factory.DataProviderFactory;
+import pages.MMPHomePage;
+import pages.PatientLoginPage;
 import pages.PatientRegisterPage;
 
 public class VerifyPatientRegisterPage {
 	
 	WebDriver driver;
+	MMPHomePage mmpHome;
 	PatientRegisterPage pRegister;
 	
+	@BeforeMethod
+	public void setUp() {
+		driver = BrowserFactory.getBrowser("Firefox");
+		driver.get(DataProviderFactory.getConfig().getApplicationUrl());
+	}
+	
 	@Test
+	public void confirmRegistrationPage(){
+		
+		mmpHome = PageFactory.initElements(driver, MMPHomePage.class);
+		mmpHome.navigateToPatientRegisterPage();
+		
+		pRegister = PageFactory.initElements(driver, PatientRegisterPage.class);
+		Assert.assertEquals(pRegister.verifyAcctDetailsLabel(), "ACCOUNT DETAILS", "labels not matching");
+	}
+	
+	@AfterMethod
+	public void tearDown(){
+		BrowserFactory.closeBrowser();
+	}
+	
+	/*@Test
 	public void registerToPatientPortal(){
 		pRegister = PageFactory.initElements(driver, PatientRegisterPage.class);
 		pRegister.patientRegisteration(DataProviderFactory.getExcel().getCellData(1, 1, 0), 
@@ -28,7 +56,7 @@ public class VerifyPatientRegisterPage {
 				DataProviderFactory.getExcel().getCellData(1, 1, 19));
 
 		
-	}
+	}*/
 	
 
 }

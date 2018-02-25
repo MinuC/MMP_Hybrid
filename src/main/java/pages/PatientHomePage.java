@@ -24,7 +24,8 @@ public class PatientHomePage {
 		@CacheLookup
 		WebElement validUser;
 	
-		@FindBy(css=".panel-title") 
+		//@FindBy(css=".panel-title")
+		@FindBy(css="h3.panel-title")
 		@CacheLookup WebElement portalTitle;
 		
 	public String verifyUser(){

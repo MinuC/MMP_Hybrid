@@ -41,6 +41,15 @@ public class PatientRegisterPage {
 	
 	@FindBy(name="register") WebElement btnSave;
 	
+	@FindBy(xpath= "//span[starts-with(text(),'ACCOUNT')]") WebElement lblAcctDetails;
+	
+	public String verifyAcctDetailsLabel(){
+		
+		String lbl = lblAcctDetails.getText();
+		return lbl;
+		
+	}
+	
 	public void patientRegisteration(String fsname2, String lname2, String dob2, String lic2, String ssn2, String state2, String city2,
 			String add2, String zip2, String age2, String ht2, String wt2,String pharm2, String pharmAdd2, String email2, String pw2, String uname2, 
 			String cfmpw2, String qn2, String ans2){

@@ -83,8 +83,7 @@
 				<configuration>
 
 					<suiteXmlFiles>
-						<suiteXmlFile>E2EVer1.xml</suiteXmlFile>
-						
+						<suiteXmlFile>Regression.xml</suiteXmlFile>	
 					</suiteXmlFiles>
 
 					<properties>

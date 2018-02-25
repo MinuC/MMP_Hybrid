@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import factory.BrowserFactory;
 import factory.DataProviderFactory;
+
 import pages.MMPHomePage;
 import pages.PatientLoginPage;
 
@@ -16,6 +17,8 @@ public class VerifyPatientLoginPage {
 
 	WebDriver driver;
 	MMPHomePage mmpHome;
+	PatientLoginPage pLogin;
+	
 
 	@BeforeMethod
 	public void setUp() {
@@ -36,11 +39,16 @@ public class VerifyPatientLoginPage {
 	public void appLogin() throws InterruptedException{
 		mmpHome = PageFactory.initElements(driver, MMPHomePage.class);
 		mmpHome.navigateToPatientLoginPage();
+		
+		pLogin = PageFactory.initElements(driver, PatientLoginPage.class);
+		
+		String linkText = pLogin.verifyForgotUserPwdLink();
+		Assert.assertEquals(linkText, "forgot Username / Password");
 
-		PatientLoginPage pLogin = PageFactory.initElements(driver, PatientLoginPage.class);
 		//pLogin.loginToAppln("TomBrady_123", "TomBrady@123");//passing parameter values manually
 		//Reading login credentials from Excel sheet
 		pLogin.loginToAppln(DataProviderFactory.getExcel().getCellData(0, 0, 0), DataProviderFactory.getExcel().getCellData(0, 0, 1));
+		  
 	}	
 
 	@AfterMethod

@@ -44,36 +44,31 @@ public class VerifyProfilePage {
 	public void verifyTitle() throws InterruptedException{
 		mmpHome = PageFactory.initElements(driver, MMPHomePage.class);
 		String mmpTitle = mmpHome.getTitle();
-		Assert.assertEquals(mmpTitle, "NAMTG");
-		//System.out.println("MMP Title is: "+ mmpTitle);	
+		Assert.assertEquals(mmpTitle, "NAMTG");	
 	}	
 
 	@Test(priority=1)
 	public void appLogin() throws InterruptedException{
+		
 		mmpHome = PageFactory.initElements(driver, MMPHomePage.class);
-
-		//		WebDriverWait wait = new WebDriverWait(driver,30);
-		//		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='Patient Login']")));
 		mmpHome.navigateToPatientLoginPage();
 
 		pLogin = PageFactory.initElements(driver, PatientLoginPage.class);
 		//pLogin.loginToAppln("TomBrady_123", "TomBrady@123");//passing parameter values manually
 
-		/*loginToApp method in PatientLoginPage is returning the username. Assigning that value to string user.
-		Reading login credentials from Excel sheet*/
 		pLogin.loginToAppln(DataProviderFactory.getExcel().getCellData(0, 0, 0), DataProviderFactory.getExcel().getCellData(0, 0, 1));	
 	}	
 
 	@Test(description="Verify Title & Username - PatientHomePage", dependsOnMethods = {"appLogin"})
 	public void validateTitleAndUsername(){
+		
 		pHome = PageFactory.initElements(driver, PatientHomePage.class);
 		String pTitle = pHome.getPortalTitle();
 		Assert.assertEquals(pTitle, "Patient Portal");
 
 		String user = pHome.verifyUser();
-		//System.out.println("Valid user: "+ user);
 		//Assert.assertTrue(user.contains("TomBrady"));
-		Assert.assertEquals(user, "Mike");
+		Assert.assertEquals(user, "kspade");
 		//Assert.assertEquals(user, "Brian","User names not matching");
 	}
 
@@ -83,7 +78,7 @@ public class VerifyProfilePage {
 
 		ProfilePage pProfile = PageFactory.initElements(driver, ProfilePage.class);
 		String actName = pProfile.getProfilePatientName();
-		Assert.assertEquals(actName, "Mike Williams");	
+		Assert.assertEquals(actName, "Kate Spade");	
 		pProfile.editProfile();
 		Thread.sleep(3000);
 	}
