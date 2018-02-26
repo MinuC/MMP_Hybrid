@@ -45,9 +45,9 @@ public class ProfilePage {
 		
 		editBtn.click();
 		providerInfo.clear();
-		providerInfo.sendKeys("Kaiser");
+		providerInfo.sendKeys("Blueshield");
 		insuranceInfo.clear();
-		insuranceInfo.sendKeys("KP");
+		insuranceInfo.sendKeys("Bluecross");
 		saveBtn.click();
 	}
 	

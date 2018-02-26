@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -13,6 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -37,14 +39,15 @@ public class VerifyProfilePage {
 	@BeforeTest
 	public void setUp(){
 		driver = BrowserFactory.getBrowser("Firefox");
-		driver.get(DataProviderFactory.getConfig().getApplicationUrl());		
-	}
+		driver.get(DataProviderFactory.getConfig().getApplicationUrl());
+		}
 
 	@Test(priority=0)
 	public void verifyTitle() throws InterruptedException{
 		mmpHome = PageFactory.initElements(driver, MMPHomePage.class);
 		String mmpTitle = mmpHome.getTitle();
 		Assert.assertEquals(mmpTitle, "NAMTG");	
+		Reporter.log("MMPHomePage title is verified", true);
 	}	
 
 	@Test(priority=1)
@@ -52,11 +55,12 @@ public class VerifyProfilePage {
 		
 		mmpHome = PageFactory.initElements(driver, MMPHomePage.class);
 		mmpHome.navigateToPatientLoginPage();
-
+		
 		pLogin = PageFactory.initElements(driver, PatientLoginPage.class);
 		//pLogin.loginToAppln("TomBrady_123", "TomBrady@123");//passing parameter values manually
 
-		pLogin.loginToAppln(DataProviderFactory.getExcel().getCellData(0, 0, 0), DataProviderFactory.getExcel().getCellData(0, 0, 1));	
+		pLogin.loginToAppln(DataProviderFactory.getExcel().getCellData(0, 0, 0), DataProviderFactory.getExcel().getCellData(0, 0, 1));
+		Reporter.log("Logged into PatientHomePage");
 	}	
 
 	@Test(priority=2, description="Verify Title & Username - PatientHomePage", dependsOnMethods = {"appLogin"})
@@ -70,6 +74,7 @@ public class VerifyProfilePage {
 		//Assert.assertTrue(user.contains("TomBrady"));
 		Assert.assertEquals(user, "kspade");
 		//Assert.assertEquals(user, "Brian","User names not matching");
+		Reporter.log("verified Home Page title");
 	}
 
 	@Test(dependsOnMethods = {"validateTitleAndUsername"})
@@ -80,6 +85,7 @@ public class VerifyProfilePage {
 		String actName = pProfile.getProfilePatientName();
 		Assert.assertEquals(actName, "Kate Spade");	
 		pProfile.editProfile();
+		Reporter.log("Profile has been updated", true);
 		Thread.sleep(3000);
 	}
 

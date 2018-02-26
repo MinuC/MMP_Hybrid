@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="RegressionSuite">
+<suite name="RegressionSuite" parallel = "tests" verbose= "8">
   <test name="Regression Test">
     <classes>     
       <class name="testCases.VerifyProfilePage"/>

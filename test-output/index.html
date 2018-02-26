@@ -101,17 +101,17 @@
                     <div class="method-list-content passed suite-RegressionSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="testCases.VerifyProfilePage" hash-for-method="appLogin">appLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="testCases.VerifyPatientLoginPage" hash-for-method="appLogin">appLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="testCases.VerifyPatientHomePage" hash-for-method="appLogin">appLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="testCases.VerifyProfilePage" hash-for-method="appLogin">appLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -141,12 +141,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="testCases.VerifyPatientLoginPage" hash-for-method="verifyTitle">verifyTitle</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="testCases.VerifyPatientHomePage" hash-for-method="verifyTitle">verifyTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="testCases.VerifyPatientHomePage" hash-for-method="verifyTitle">verifyTitle</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="testCases.VerifyPatientLoginPage" hash-for-method="verifyTitle">verifyTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-RegressionSuite -->
@@ -282,7 +282,7 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;RegressionSuite&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;8&quot; name=&quot;RegressionSuite&quot; parallel=&quot;tests&quot;&gt;
   &lt;test name=&quot;Regression Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testCases.VerifyProfilePage&quot;/&gt;
@@ -333,48 +333,48 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'navigateToProfilePage')
 data.setCell(0, 2, 'testCases.VerifyProfilePage')
-data.setCell(0, 3, 15620);
+data.setCell(0, 3, 15626);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'appLogin')
 data.setCell(1, 2, 'testCases.VerifyProfilePage')
-data.setCell(1, 3, 7986);
+data.setCell(1, 3, 7792);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'appLogin')
 data.setCell(2, 2, 'testCases.VerifyPatientHomePage')
-data.setCell(2, 3, 6927);
+data.setCell(2, 3, 5096);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'appLogin')
 data.setCell(3, 2, 'testCases.VerifyPatientLoginPage')
-data.setCell(3, 3, 4754);
+data.setCell(3, 3, 4637);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'confirmRegistrationPage')
 data.setCell(4, 2, 'testCases.VerifyPatientRegisterPage')
-data.setCell(4, 3, 587);
+data.setCell(4, 3, 1423);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'validateTitleAndUsername')
+data.setCell(5, 1, 'verifyTitle')
 data.setCell(5, 2, 'testCases.VerifyProfilePage')
-data.setCell(5, 3, 80);
+data.setCell(5, 3, 143);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyTitle')
+data.setCell(6, 1, 'validateTitleAndUsername')
 data.setCell(6, 2, 'testCases.VerifyProfilePage')
-data.setCell(6, 3, 48);
+data.setCell(6, 3, 75);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyTitle')
-data.setCell(7, 2, 'testCases.VerifyMMPHomePage')
-data.setCell(7, 3, 10);
+data.setCell(7, 2, 'testCases.VerifyPatientHomePage')
+data.setCell(7, 3, 14);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'verifyTitle')
 data.setCell(8, 2, 'testCases.VerifyPatientLoginPage')
-data.setCell(8, 3, 10);
+data.setCell(8, 3, 12);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'verifyTitle')
-data.setCell(9, 2, 'testCases.VerifyPatientHomePage')
-data.setCell(9, 3, 10);
+data.setCell(9, 2, 'testCases.VerifyMMPHomePage')
+data.setCell(9, 3, 9);
 window.suiteTableData['RegressionSuite']= { tableData: data, tableDiv: 'times-div-RegressionSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-RegressionSuite">
               </div> <!-- times-div-RegressionSuite -->
             </div> <!-- times-div -->
@@ -385,6 +385,30 @@ return data;
             <span class="header-content">Reporter output for RegressionSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">appLogin</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Logged into PatientHomePage</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyTitle</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">MMPHomePage title is verified</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateTitleAndUsername</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">verified Home Page title</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">navigateToProfilePage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Profile has been updated</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-RegressionSuite" class="panel">
@@ -410,113 +434,125 @@ return data;
               <div class="chronological-class-name">testCases.VerifyProfilePage</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">17203 ms</span>
+                <span class="method-start">30419 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">verifyTitle</span>
-                <span class="method-start">33775 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">appLogin</span>
-                <span class="method-start">33824 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">validateTitleAndUsername</span>
-                <span class="method-start">41815 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">navigateToProfilePage</span>
-                <span class="method-start">41896 ms</span>
+                <span class="method-start">88169 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.VerifyPatientHomePage</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">57522 ms</span>
+                <span class="method-start">88316 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyTitle</span>
-                <span class="method-start">74094 ms</span>
+                <span class="method-start">108428 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">74107 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">74911 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">appLogin</span>
-                <span class="method-start">91544 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">98472 ms</span>
+                <span class="method-start">108444 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.VerifyPatientRegisterPage</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">98911 ms</span>
+                <span class="method-start">110418 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">confirmRegistrationPage</span>
-                <span class="method-start">117811 ms</span>
+                <span class="method-start">126923 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">118401 ms</span>
+                <span class="method-start">128347 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.VerifyMMPHomePage</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyTitle</span>
-                <span class="method-start">118875 ms</span>
+                <span class="method-start">129161 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.VerifyPatientLoginPage</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">118886 ms</span>
+                <span class="method-start">129172 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyTitle</span>
-                <span class="method-start">134520 ms</span>
+                <span class="method-start">144362 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">134531 ms</span>
+                <span class="method-start">144376 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.VerifyProfilePage</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">appLogin</span>
+                <span class="method-start">145165 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.VerifyPatientHomePage</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">135309 ms</span>
+                <span class="method-start">152958 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">appLogin</span>
-                <span class="method-start">151017 ms</span>
+                <span class="method-start">169534 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">155784 ms</span>
+                <span class="method-start">174632 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.VerifyPatientLoginPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">175386 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">appLogin</span>
+                <span class="method-start">191607 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">196246 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.VerifyProfilePage</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">validateTitleAndUsername</span>
+                <span class="method-start">196853 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">navigateToProfilePage</span>
+                <span class="method-start">196930 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.VerifyMMPHomePage</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">156313 ms</span>
+                <span class="method-start">212556 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.VerifyProfilePage</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">closeReport</span>
-                <span class="method-start">156313 ms</span>
+                <span class="method-start">212557 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
